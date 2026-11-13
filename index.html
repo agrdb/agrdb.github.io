@@ -27,9 +27,9 @@
     <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <!-- Core theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Schema.org JSON-LD Structured Data -->
@@ -54,14 +54,6 @@
     }
     </script>
     <style>
-      /* Experience timeline */
-
-
-
-
-
-
-
       /* Open-source tools */
       .tool-card{height:100%;padding:1.6rem;border-radius:12px;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.07);border-top:4px solid #00b4d8;display:flex;flex-direction:column;}
       .tool-card h4{font-family:Montserrat,sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.25rem;}
@@ -106,6 +98,7 @@
     gtag('js', new Date());
     gtag('config', 'G-T2CMM3M6PG');
     </script>
+    <link href="css/refresh.css" rel="stylesheet" />
 </head>
     <body id="page-top">
         <!-- Skip to content link for accessibility -->
@@ -120,29 +113,30 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Track record</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item nav-item-cta"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" id="top">
             <div class="container">
-                <div class="masthead-subheading">Andrés G. Rodríguez</div>
-                <h1 class="masthead-heading text-uppercase">BIM Specialist &amp; Developer</h1>
-                <p class="masthead-description" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; max-width: 700px; margin: 0 auto 1.5rem;">10+ years delivering BIM for infrastructure — metro, rail, hydroelectric, highways and airports. Revit &amp; Civil 3D modeling, BIM coordination, Scan-to-BIM and workflow automation with C#, Python and Dynamo.</p>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">View my work</a>
-                <div class="mt-3">
-                    <a href="https://github.com/agrdb" target="_blank" rel="noopener" class="btn-masthead-brochure">
-                        <i class="fab fa-github me-1"></i>See my code on GitHub
-                    </a>
+                <div class="hero-copy">
+                    <h1 class="masthead-heading">BIM models and custom Revit &amp; Civil&nbsp;3D tools for infrastructure projects</h1>
+                    <p class="hero-byline"><strong>Andrés G. Rodríguez</strong> · BIM Specialist &amp; Developer · Bogotá, Colombia · 10+ years on metro, rail, hydroelectric, highway and airport projects</p>
+                    <p class="hero-lede">I model, coordinate and document infrastructure in Revit, Civil&nbsp;3D and Navisworks, turn point clouds into as-built models, and write the C#, Python and Dynamo tools that take the repetitive work out of production.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary btn-xl" href="#contact">Discuss a project</a>
+                        <a class="btn btn-ghost btn-xl" href="#portfolio">View work</a>
+                    </div>
+                    <p class="hero-meta">Available for remote work in English and Spanish</p>
                 </div>
             </div>
         </header>
@@ -150,35 +144,29 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">BIM Modeling &amp; Coordination | Civil 3D | Scan-to-BIM | Construction Drawings | Automation | BIM-GIS</h3>
+                <div class="section-head">
+                    <h2 class="section-heading">Services</h2>
+                    <p class="section-subheading">Three ways I can help a design or construction team.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <div class="service-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <h4>BIM Modeling &amp; Coordination</h4>
-                            <p>Architectural, structural and MEP models in Revit, plus parametric family creation. Multidisciplinary model coordination, clash detection and issue tracking in Navisworks, and information management aligned with ISO 19650 (BEP, MIDP, LOD/LOI).</p>
+                        <div class="service-card">
+                            <i class="fas fa-layer-group service-glyph" aria-hidden="true"></i>
+                            <h3 class="card-title">BIM Modeling &amp; Coordination</h3>
+                            <p>Architectural, structural and MEP models in Revit, plus parametric family creation. Multidisciplinary model coordination, clash detection and issue tracking in Navisworks, and information management aligned with ISO 19650 (<abbr title="BIM Execution Plan">BEP</abbr>, <abbr title="Master Information Delivery Plan">MIDP</abbr>, <abbr title="Level of Detail / Level of Information">LOD/LOI</abbr>).</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <div class="service-icon">
-                                <i class="fas fa-drafting-compass"></i>
-                            </div>
-                            <h4>Civil 3D, Scan-to-BIM &amp; Drawings</h4>
+                        <div class="service-card">
+                            <i class="fas fa-drafting-compass service-glyph" aria-hidden="true"></i>
+                            <h3 class="card-title">Civil 3D, Scan-to-BIM &amp; Drawings</h3>
                             <p>Civil 3D models for roads, drainage and hydraulic works. Point-cloud processing in ReCap and WebODM to build as-built Revit and Civil 3D models. Complete construction drawing sets in AutoCAD and Civil 3D, plus GIS data in ArcGIS and QGIS.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <div class="service-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h4>Automation &amp; BIM Development</h4>
+                        <div class="service-card">
+                            <i class="fas fa-laptop-code service-glyph" aria-hidden="true"></i>
+                            <h3 class="card-title">Automation &amp; BIM Development</h3>
                             <p>Custom C#/.NET plugins for AutoCAD, Civil 3D, Revit and Navisworks; Python (pyAutoCAD, pyRevit) and Dynamo scripts that cut drafting and QA/QC time. IFC tooling, BIM-GIS integration and Power BI dashboards for project reporting.</p>
                         </div>
                     </div>
@@ -189,84 +177,64 @@
         <!-- Experience-->
         <section class="page-section" id="experience">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Experience</h2>
-                    <h3 class="section-subheading text-muted">10+ years on infrastructure projects across Latin America — from drafter to BIM specialist and developer</h3>
+                <div class="section-head">
+                    <h2 class="section-heading">Track record</h2>
+                    <p class="section-subheading">Ten years on public infrastructure across Latin America, from the drawing board to the code.</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-subway me-2" style="color:#00b4d8"></i>Infrastructure Projects</h4>
-                            <p>Metro and rail, hydroelectric plants, highways, airports, water treatment and urban drainage — from design phase through construction support.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-project-diagram me-2" style="color:#00b4d8"></i>BIM Coordination</h4>
-                            <p>Multidisciplinary model coordination (architecture, structures, MEP, civil), clash detection and issue tracking in Navisworks, MIDP and BIM execution standards aligned with ISO 19650, QA/QC and leadership of production teams.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-satellite-dish me-2" style="color:#00b4d8"></i>Scan-to-BIM</h4>
-                            <p>Point-cloud processing in ReCap and WebODM, and as-built Revit and Civil 3D models built from laser-scan and photogrammetry data.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-drafting-compass me-2" style="color:#00b4d8"></i>Civil 3D &amp; Drawings</h4>
-                            <p>Corridors, hydraulic profiles, cross-sections and drainage networks in Civil 3D, and complete multidisciplinary construction drawing sets in AutoCAD.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-code me-2" style="color:#00b4d8"></i>Automation &amp; Development</h4>
-                            <p>C#/.NET plugins for AutoCAD, Civil 3D, Revit and Navisworks; Python, Dynamo and VBA scripts that cut production time; Power BI dashboards and BIM-GIS workflows.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tool-card">
-                            <h4><i class="fas fa-route me-2" style="color:#00b4d8"></i>Career Path</h4>
-                            <p>Started in 2014 as a CAD drafter, then BIM technician and BIM professional coordinating large public infrastructure, and today BIM specialist building my own tools.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a class="btn btn-primary btn-xl text-uppercase" href="https://agrdb.notion.site/Andr-s-G-Rodr-guez-AGRDB-0e951a9c40f542469b85d28aff8e7c54" target="_blank" rel="noopener"><i class="fas fa-file-alt me-2"></i>View full résumé</a>
+                <ol class="record">
+                    <li class="record-row">
+                        <div class="record-what"><h3>Metro Línea 1</h3><p class="record-role">Scan-to-BIM</p></div>
+                        <p class="record-detail">Processed laser-scan and photogrammetry point clouds in ReCap and WebODM, and built as-built Civil&nbsp;3D and Revit models from them.</p>
+                        <p class="record-stack">ReCap · WebODM · Civil 3D · Revit</p>
+                    </li>
+                    <li class="record-row">
+                        <div class="record-what"><h3>Metro, rail, hydroelectric, highways and airports</h3><p class="record-role">BIM coordination</p></div>
+                        <p class="record-detail">Multidisciplinary coordination of architecture, structures, MEP and civil models: clash detection and issue tracking, delivery plans and BIM execution standards aligned with ISO&nbsp;19650, QA/QC and leading production teams.</p>
+                        <p class="record-stack">Navisworks · Revit · ISO 19650</p>
+                    </li>
+                    <li class="record-row">
+                        <div class="record-what"><h3>Roads, drainage and water treatment</h3><p class="record-role">Civil 3D modeling &amp; drawings</p></div>
+                        <p class="record-detail">Corridors, hydraulic profiles, cross-sections and drainage networks, delivered with complete multidisciplinary construction drawing sets.</p>
+                        <p class="record-stack">Civil 3D · AutoCAD · Revit MEP</p>
+                    </li>
+                </ol>
+                <div class="career">
+                    <p class="career-path"><span>2014 · CAD drafter</span><span>BIM technician</span><span>BIM coordination on public infrastructure</span><span>Today · BIM specialist &amp; developer</span></p>
+                    <a class="link-arrow" href="https://agrdb.notion.site/Andr-s-G-Rodr-guez-AGRDB-0e951a9c40f542469b85d28aff8e7c54" target="_blank" rel="noopener">Full résumé <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
         
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section portfolio-band" id="portfolio">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Selected work — open the 3D models, videos and maps</h3>
+                <div class="section-head">
+                    <h2 class="section-heading">Portfolio</h2>
+                    <p class="section-subheading">Selected work — open the 3D models, videos and maps</p>
                 </div>
-                <div class="pj-filters" role="tablist">
-                    <button class="pj-chip active" data-filter="all">All</button>
-                    <button class="pj-chip" data-filter="infra">Infrastructure</button>
-                    <button class="pj-chip" data-filter="scan">Scan-to-BIM</button>
-                    <button class="pj-chip" data-filter="bimgis">BIM-GIS</button>
-                    <button class="pj-chip" data-filter="auto">Automation</button>
-                    <button class="pj-chip" data-filter="data">Data</button>
+                <div class="pj-filters" role="group" aria-label="Filter projects">
+                    <button class="pj-chip active" type="button" aria-pressed="true" data-filter="all">All</button>
+                    <button class="pj-chip" type="button" aria-pressed="false" data-filter="infra">Infrastructure</button>
+                    <button class="pj-chip" type="button" aria-pressed="false" data-filter="scan">Scan-to-BIM</button>
+                    <button class="pj-chip" type="button" aria-pressed="false" data-filter="bimgis">BIM-GIS</button>
+                    <button class="pj-chip" type="button" aria-pressed="false" data-filter="auto">Automation</button>
+                    <button class="pj-chip" type="button" aria-pressed="false" data-filter="data">Data</button>
                 </div>
                 <div class="pj-grid">
                     <article class="pj-card" data-cat="infra bimgis">
                         <div class="pj-thumb"><img src="assets/img/projects/corridor.jpg" alt="Urban road corridor — BIM + GIS" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Civil 3D · Revit · IFC · ArcGIS</span>
-                            <h4>Urban road corridor — BIM + GIS</h4>
+                            <p class="pj-tag">Civil 3D · Revit · IFC · ArcGIS</p>
+                            <h3 class="card-title">Urban road corridor — BIM + GIS</h3>
                             <p>Capstone of a 136-hour BIM for Infrastructure program: GIS studies for a new urban road, then a federated model of the roadway, bridge, box culvert, sewer, water and street lighting.</p>
-                            <div class="pj-actions"><a class="pj-btn" href="mesh.html?m=corridor"><i class="fas fa-cube me-1"></i>Open 3D model</a><a class="pj-btn" href="#" data-video="assets/video/bim-gis-corridor.mp4"><i class="fas fa-play me-1"></i>BIM-GIS video</a><a class="pj-btn" href="#" data-gallery="assets/img/projects/corridor-utilities.jpg|Federated model — bridge, roadway, street lighting and water main,assets/img/projects/clash-navisworks.jpg|Clash detection in Navisworks — sewer manhole vs. water main under the roadway"><i class="fas fa-images me-1"></i>Model &amp; clash views</a></div>
+                            <div class="pj-actions"><a class="pj-btn" href="mesh.html?m=corridor"><i class="fas fa-cube me-1"></i>Open 3D model</a><a class="pj-btn" href="assets/video/bim-gis-corridor.mp4" data-video="assets/video/bim-gis-corridor.mp4"><i class="fas fa-play me-1"></i>BIM-GIS video</a><a class="pj-btn" href="assets/img/projects/corridor-utilities.jpg" data-gallery="assets/img/projects/corridor-utilities.jpg|Federated model — bridge, roadway, street lighting and water main,assets/img/projects/clash-navisworks.jpg|Clash detection in Navisworks — sewer manhole vs. water main under the roadway"><i class="fas fa-images me-1"></i>Model &amp; clash views</a></div>
                         </div>
                     </article>
                     <article class="pj-card" data-cat="scan">
                         <div class="pj-thumb"><img src="assets/img/projects/formwork-scan.jpg" alt="Formwork survey — Scan-to-BIM" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">WebODM · Reality capture</span>
-                            <h4>Formwork survey — Scan-to-BIM</h4>
+                            <p class="pj-tag">WebODM · Reality capture</p>
+                            <h3 class="card-title">Formwork survey — Scan-to-BIM</h3>
                             <p>Drone photogrammetry of a formwork assembly: 151 images, 2.9 M-point cloud, 0.3 cm ground sample distance. Explore the textured mesh in 3D.</p>
                             <div class="pj-actions"><a class="pj-btn" href="mesh.html?m=formwork"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
                         </div>
@@ -274,8 +242,8 @@
                     <article class="pj-card" data-cat="bimgis">
                         <div class="pj-thumb"><img src="assets/img/projects/cesium-city.jpg" alt="Building model in its city context" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Cesium ion · BIM-GIS</span>
-                            <h4>Building model in its city context</h4>
+                            <p class="pj-tag">Cesium ion · BIM-GIS</p>
+                            <h3 class="card-title">Building model in its city context</h3>
                             <p>Georeferenced BIM model placed on 3D city buildings and satellite imagery to study massing and street relationships in central Bogotá.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://ion.cesium.com/stories/viewer/?id=e2791ff5-e3dd-480f-9355-699ccb3b45ad" target="_blank" rel="noopener"><i class="fas fa-globe-americas me-1"></i>Open 3D story</a></div>
                         </div>
@@ -283,8 +251,8 @@
                     <article class="pj-card" data-cat="infra">
                         <div class="pj-thumb"><img src="assets/img/projects/bridge.jpg" alt="Box-girder bridge" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Tekla Structures · IFC</span>
-                            <h4>Box-girder bridge</h4>
+                            <p class="pj-tag">Tekla Structures · IFC</p>
+                            <h3 class="card-title">Box-girder bridge</h3>
                             <p>Complete structural model — piles, caps, piers, box girder and abutments — exported to IFC for coordination.</p>
                             <div class="pj-actions"><a class="pj-btn" href="viewer.html?name=BOX%20BRIDGE&cx=0.8&cy=0.35&cz=0.8#Models/PUENTE-BOX.ifc"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
                         </div>
@@ -292,8 +260,8 @@
                     <article class="pj-card" data-cat="infra">
                         <div class="pj-thumb"><img src="assets/img/projects/water-plant.jpg" alt="Water treatment plant" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Revit · MEP · IFC</span>
-                            <h4>Water treatment plant</h4>
+                            <p class="pj-tag">Revit · MEP · IFC</p>
+                            <h3 class="card-title">Water treatment plant</h3>
                             <p>Process building, tanks, equipment and piping modeled in Revit with integrated MEP systems and clash coordination.</p>
                             <div class="pj-actions"><a class="pj-btn" href="viewer.html?name=WATER%20TREATMENT%20PLANT#Models/MAIC_PTAP1.ifc"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
                         </div>
@@ -301,8 +269,8 @@
                     <article class="pj-card" data-cat="auto">
                         <div class="pj-thumb"><img src="https://img.youtube.com/vi/W2S6_7KCKmU/hqdefault.jpg" alt="Civil 3D automation with Dynamo" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Dynamo · Civil 3D</span>
-                            <h4>Civil 3D automation with Dynamo</h4>
+                            <p class="pj-tag">Dynamo · Civil 3D</p>
+                            <h3 class="card-title">Civil 3D automation with Dynamo</h3>
                             <p>Dynamo graph that batch-creates named and styled alignments from polylines in Civil 3D.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=W2S6_7KCKmU" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
                         </div>
@@ -310,8 +278,8 @@
                     <article class="pj-card" data-cat="auto">
                         <div class="pj-thumb"><img src="https://img.youtube.com/vi/Ib81ZiSZojA/hqdefault.jpg" alt="AutoCAD automation with Python" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Python · pyAutoCAD</span>
-                            <h4>AutoCAD automation with Python</h4>
+                            <p class="pj-tag">Python · pyAutoCAD</p>
+                            <h3 class="card-title">AutoCAD automation with Python</h3>
                             <p>Python scripts that generate layers, blocks and drawing content in AutoCAD automatically.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=Ib81ZiSZojA" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
                         </div>
@@ -319,8 +287,8 @@
                     <article class="pj-card" data-cat="auto bimgis">
                         <div class="pj-thumb"><img src="https://img.youtube.com/vi/ZPh4pBBsDqs/hqdefault.jpg" alt="Dynamo + GIS integration" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Dynamo · ArcGIS · Revit</span>
-                            <h4>Dynamo + GIS integration</h4>
+                            <p class="pj-tag">Dynamo · ArcGIS · Revit</p>
+                            <h3 class="card-title">Dynamo + GIS integration</h3>
                             <p>Workflow that connects ArcGIS geospatial data with Revit models through Dynamo.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=ZPh4pBBsDqs" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
                         </div>
@@ -328,14 +296,28 @@
                     <article class="pj-card" data-cat="data">
                         <div class="pj-thumb"><img src="assets/img/projects/powerbi.jpg" alt="Project dashboard" loading="lazy" /></div>
                         <div class="pj-body">
-                            <span class="pj-tag">Power BI</span>
-                            <h4>Project dashboard</h4>
+                            <p class="pj-tag">Power BI</p>
+                            <h3 class="card-title">Project dashboard</h3>
                             <p>Interactive report with quantities, percentages and a map view for project monitoring.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" target="_blank" rel="noopener"><i class="fas fa-chart-bar me-1"></i>Open dashboard</a></div>
                         </div>
                     </article>
                 </div>
-                <p class="text-center mt-4 lang-switch">¿Prefieres español? <a href="assets/img/portfolio/AGRDB_Brochure.pdf" download>Descarga el brochure de servicios (PDF)</a></p>
+            </div>
+        </section>
+        
+        <!-- Call to action -->
+        <section class="cta-band" aria-labelledby="ctaTitle">
+            <div class="container cta-inner">
+                <div>
+                    <h2 id="ctaTitle">Need a BIM modeler or a custom Revit / Civil&nbsp;3D tool?</h2>
+                    <p>Tell me the scope, the software and the deadline, and I'll reply with how I can help.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn btn-primary btn-xl" href="#contact">Discuss a project</a>
+                    <a class="btn btn-ghost-dark btn-xl" href="https://wa.me/573058522478" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a>
+                </div>
+                <p class="cta-es" lang="es">¿Prefieres español? <a href="assets/img/portfolio/AGRDB_Brochure.pdf" download>Descarga el brochure de servicios (PDF)</a></p>
             </div>
         </section>
         
@@ -351,14 +333,14 @@
         <!-- Open-source tools-->
         <section class="page-section" id="tools">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Open-Source Tools</h2>
-                    <h3 class="section-subheading text-muted">Code I write to automate BIM and CAD workflows — available on GitHub</h3>
+                <div class="section-head">
+                    <h2 class="section-heading">Open-Source Tools</h2>
+                    <p class="section-subheading">Code I write to automate BIM and CAD workflows — available on GitHub</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
                         <div class="tool-card">
-                            <h4>GenLay</h4>
+                            <h3 class="card-title">GenLay</h3>
                             <div class="tool-tech">C# · .NET · AutoCAD API</div>
                             <p>AutoCAD plugin that creates a numbered sheet for every frame drawn in model space — it clones a base layout and centers the viewport at the chosen scale, replacing hours of manual sheet setup.</p>
                             <a href="https://github.com/agrdb/GenLay" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>View repository</a>
@@ -366,7 +348,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="tool-card">
-                            <h4>BlockAlignTool</h4>
+                            <h3 class="card-title">BlockAlignTool</h3>
                             <div class="tool-tech">C# · .NET · AutoCAD API</div>
                             <p>AutoCAD plugin that aligns existing blocks to a polyline or inserts them at regular intervals along it, rotated to the tangent — for poles, lights, signs and chainage marks.</p>
                             <a href="https://github.com/agrdb/BlockAlignTool" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>View repository</a>
@@ -374,7 +356,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="tool-card">
-                            <h4>IFC Auditor</h4>
+                            <h3 class="card-title">IFC Auditor</h3>
                             <div class="tool-tech">Python · IFC</div>
                             <p>Checks IFC models for missing properties and data quality issues before delivery.</p>
                             <a href="https://github.com/agrdb/IFC_Auditor" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>View repository</a>
@@ -382,7 +364,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="tool-card">
-                            <h4>Dynamo Scripts</h4>
+                            <h3 class="card-title">Dynamo Scripts</h3>
                             <div class="tool-tech">Dynamo · Python · Civil 3D / Revit</div>
                             <p>Dynamo graphs for Civil 3D and Revit that automate modeling and documentation tasks.</p>
                             <a href="https://github.com/agrdb/Dynamo_scripts" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>View repository</a>
@@ -395,17 +377,17 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
+                <div class="section-head">
+                    <h2 class="section-heading">About</h2>
                 </div>
-                <div class="about-card text-center mt-5">
+                <div class="about-card mt-4">
                     <img class="about-photo" src="assets/img/team/2.jpg" alt="Andrés G. Rodríguez — BIM Specialist and BIM Developer" />
                     <h3 class="about-name">Andrés G. Rodríguez</h3>
                     <p class="about-title">BIM Specialist | BIM Coordination | BIM Developer</p>
                     <div class="about-social">                        
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/c/AndrésRodríguez2" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/agrdb" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/agrdb"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/c/AndrésRodríguez2" target="_blank" rel="noopener" aria-label="YouTube channel"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/agrdb" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/agrdb" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
                     </div>
                     <p class="about-bio">I'm a BIM Specialist and BIM Developer based in Bogotá, Colombia, with more than 10 years in the AEC industry. I started as a CAD drafter and grew into BIM coordination on large public infrastructure — metro, rail, hydroelectric, highway and airport projects — working with multidisciplinary teams in Colombia and across Latin America.</p>
                     <p class="about-bio">What sets my work apart is that I combine production with development: besides modeling in Revit and Civil 3D, coordinating in Navisworks and turning point clouds into BIM models, I write my own C#, Python and Dynamo tools to remove repetitive work and raise quality. I'm also studying a Bachelor's in Architecture. I work in Spanish and English and I'm comfortable collaborating remotely with international teams.</p>
@@ -416,9 +398,9 @@
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact</h2>
-                    <h3 class="section-subheading text-muted">Let's talk about your project or role</h3>
+                <div class="section-head">
+                    <h2 class="section-heading">Contact</h2>
+                    <p class="section-subheading">Tell me about your project: scope, software and deadline. Hiring for a role? That works here too.</p>
                 </div>
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-8">
@@ -472,7 +454,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button class="btn btn-primary btn-xl text-uppercase contact-submit-btn" id="contactSubmitBtn" type="submit">
+                                    <button class="btn btn-primary btn-xl contact-submit-btn" id="contactSubmitBtn" type="submit">
                                         <span class="btn-text">Send message <i class="fas fa-paper-plane ms-2"></i></span>
                                         <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin me-2"></i>Sending...</span>
                                         <span class="btn-success-msg" style="display:none"><i class="fas fa-check-circle me-2"></i>Sent!</span>
@@ -483,12 +465,13 @@
                             <div id="contactSuccess" class="contact-success-overlay" style="display:none">
                                 <div class="contact-success-content">
                                     <i class="fas fa-check-circle"></i>
-                                    <h4>Message sent!</h4>
+                                    <h3 class="card-title">Message sent!</h3>
                                     <p>Thanks for reaching out. I'll get back to you as soon as possible.</p>
                                     <button class="btn btn-outline-light btn-sm mt-3" onclick="resetContactForm()">Send another message</button>
                                 </div>
                             </div>
                         </div>
+                        <p class="contact-alt">Prefer to message directly? <a href="https://wa.me/573058522478" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.linkedin.com/in/agrdb" target="_blank" rel="noopener">LinkedIn</a></p>
                     </div>
                 </div>
             </div>
@@ -498,74 +481,20 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start" style="color: #ffffff;">Copyright &copy; AGR Digital Building 2021 - 2026</div>
+                    <div class="col-lg-4 text-lg-start footer-text">&copy; 2021–2026 Andrés G. Rodríguez · AGR Digital Building</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://androdvlog.blogspot.com/" target="_blank"><i class="fab fa-blogger-b"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://wa.me/573058522478" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://androdvlog.blogspot.com/" target="_blank" rel="noopener" aria-label="Blog"><i class="fab fa-blogger-b"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://wa.me/573058522478" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <span style="color:#ffffff;">Bogotá, Colombia · Available for remote work</span>
+                        <span class="footer-text">Bogotá, Colombia · Available for remote work</span>
                     </div>
                 </div>
             </div>
         </footer>
         
-        <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">GIS</h2>
-                                    <p class="item-intro text-muted">ArcGIS & QGIS</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Geoprocessing in QGIS and ArcGIS to obtain and prepare spatial data that feeds BIM models.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> AGRDB</li>
-                                        <li><strong>Category:</strong> GIS</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i> Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">AutoCAD</h2>
-                                    <p class="item-intro text-muted">AutoCAD drawing presentation</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                    <p>Site location plan for a treatment plant. Only part of the sheet is shown for confidentiality reasons.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> AGRDB</li>
-                                        <li><strong>Category:</strong> AutoCAD</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i> Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Mobile contact shortcut -->
+        <a class="sticky-contact" href="#contact">Discuss a project</a>
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -575,7 +504,7 @@
         (function(){
             var chips=document.querySelectorAll('.pj-chip'),grid=document.querySelector('.pj-grid');
             chips.forEach(function(c){c.addEventListener('click',function(){
-                chips.forEach(function(x){x.classList.remove('active')});c.classList.add('active');
+                chips.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-pressed','false')});c.classList.add('active');c.setAttribute('aria-pressed','true');
                 var f=c.dataset.filter;grid.classList.toggle('filtered',f!=='all');
                 grid.querySelectorAll('.pj-card').forEach(function(card){card.classList.toggle('hide',f!=='all'&&card.dataset.cat.split(' ').indexOf(f)<0)});
             })});
@@ -588,6 +517,14 @@
             m.querySelector('.pj-close').onclick=close;m.addEventListener('click',function(e){if(e.target===m)close()});
             prev.onclick=function(){i=(i-1+items.length)%items.length;show()};next.onclick=function(){i=(i+1)%items.length;show()};
             document.addEventListener('keydown',function(e){if(!m.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')prev.onclick();if(e.key==='ArrowRight')next.onclick();});
+        })();
+        (function(){
+            var btn=document.querySelector('.sticky-contact'),hero=document.querySelector('.masthead'),contact=document.getElementById('contact');
+            if(!btn||!('IntersectionObserver' in window))return;
+            var heroVisible=true,contactVisible=false;
+            function sync(){btn.classList.toggle('show',!heroVisible&&!contactVisible);}
+            new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting;sync();}).observe(hero);
+            new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;sync();},{rootMargin:'0px 0px -30% 0px'}).observe(contact);
         })();
         </script>
 
